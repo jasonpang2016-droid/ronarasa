@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pilih produk Rona Rasa, tinjau keranjang, dan kirim pesanan melalui WhatsApp.">
+  <meta name="theme-color" content="#f8f5ed">
+  <title>Pemesanan — Rona Rasa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Rona Rasa, beranda"><span class="brand-mark" aria-hidden="true">R</span><span>rona<span class="brand-light">rasa</span><small>RASA RUMAHAN, CERITA NUSANTARA</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Buka menu"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Navigasi utama"><ul class="nav-list">
+      <li><a class="nav-link" href="index.html">Beranda</a></li><li><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+      <li class="has-dropdown"><a class="nav-link" href="produk.html">Produk <span class="chevron" aria-hidden="true">⌄</span></a><ul class="dropdown"><li><a href="produk.html#sambal">Sambal</a></li><li><a href="produk.html#bumbu">Bumbu</a></li><li><a href="produk.html#merchandise">Merchandise</a></li></ul></li>
+      <li><a class="nav-link" href="kontak.html">Kontak</a></li>
+    </ul><a class="button button-small nav-cta" href="pemesanan.html" aria-current="page">Pesan <span class="cart-count" data-cart-count>0</span></a></nav>
+  </div></header>
+  <main id="konten">
+    <section class="page-hero"><div class="container page-hero-inner"><p class="eyebrow">PESANAN DIBUAT MUDAH</p><h1>Pilih, cek, lalu <em>pesan.</em></h1><p>Masukkan produk ke keranjang dan kirim rincian pesanan melalui WhatsApp.</p><div class="breadcrumb"><a href="index.html">Beranda</a><span aria-hidden="true">/</span><span>Pemesanan</span></div></div></section>
+    <section class="order-section section-pad"><div class="container order-layout">
+      <div class="order-main">
+        <section class="order-panel" aria-labelledby="pilih-produk">
+          <div class="order-panel-heading"><div><p class="eyebrow">LANGKAH 01</p><h2 id="pilih-produk">Pilih produk</h2></div><a class="text-link" href="produk.html">Lihat katalog <span aria-hidden="true">↗</span></a></div>
+          <form class="add-product-form">
+            <label for="product-select">Produk yang ingin ditambahkan</label>
+            <div class="add-product-controls"><select id="product-select" name="product" required><option value="">Pilih produk</option></select><button class="button button-small" type="submit">Tambah</button></div>
+            <p class="order-help">Jumlah bisa diubah langsung dari keranjang. Harga dalam rupiah.</p>
+          </form>
+        </section>
+        <section class="order-panel cart-panel" aria-labelledby="isi-keranjang">
+          <div class="order-panel-heading"><div><p class="eyebrow">LANGKAH 02</p><h2 id="isi-keranjang">Keranjangmu</h2></div><button class="clear-cart" type="button" data-clear-cart>Kosongkan</button></div>
+          <div class="cart-items" data-cart-items aria-live="polite"></div>
+          <div class="cart-empty" data-cart-empty>Keranjang masih kosong. Tambahkan produk untuk mulai memesan.</div>
+          <div class="cart-totals">
+            <div><span>Subtotal produk</span><strong data-subtotal>Rp0</strong></div>
+            <div><span>Estimasi ongkos kirim</span><strong data-shipping>Rp0</strong></div>
+            <div class="cart-grand-total"><span>Estimasi total</span><strong data-total>Rp0</strong></div>
+          </div>
+          <p class="order-help">Ongkos kirim sementara Rp15.000. Total dan ketersediaan produk akan dikonfirmasi kembali oleh penjual.</p>
+        </section>
+      </div>
+      <section class="order-panel customer-panel" aria-labelledby="data-pemesan">
+        <p class="eyebrow">LANGKAH 03</p><h2 id="data-pemesan">Data pemesan</h2>
+        <form class="checkout-form">
+          <label for="customer-name">Nama lengkap</label><input id="customer-name" name="nama" type="text" autocomplete="name" placeholder="Namamu" required>
+          <label for="customer-phone">Nomor WhatsApp</label><input id="customer-phone" name="telepon" type="tel" autocomplete="tel" placeholder="08xxxxxxxxxx" required>
+          <label for="customer-address">Alamat pengiriman</label><textarea id="customer-address" name="alamat" rows="3" autocomplete="street-address" placeholder="Alamat lengkap, kecamatan, kota, dan kode pos" required></textarea>
+          <label for="customer-notes">Catatan pesanan <span>(opsional)</span></label><textarea id="customer-notes" name="catatan" rows="3" placeholder="Contoh: sambal dipisah, patokan alamat, atau waktu pengiriman"></textarea>
+          <button class="button form-submit" type="submit">Kirim pesanan via WhatsApp <span aria-hidden="true">↗</span></button>
+          <p class="order-help">Pesanan akan dibuka sebagai pesan WhatsApp untuk diperiksa sebelum dikirim. Pembayaran dan pengiriman dikonfirmasi langsung oleh penjual.</p>
+          <p class="order-status" data-order-status role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div></section>
+    <section class="order-disclaimer"><div class="container"><p><strong>Catatan:</strong> Situs ini adalah demo tugas dan tidak memproses pembayaran atau menyimpan data pemesan di server. Ganti nomor WhatsApp contoh pada <code>js/script.js</code> dengan nomor usaha yang benar sebelum situs dipublikasikan.</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-main"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">R</span><span>rona<span class="brand-light">rasa</span><small>RASA RUMAHAN, CERITA NUSANTARA</small></span></a><p>Racikan lokal, rasa istimewa.<br>Dibuat dengan hati di Bandung.</p><div class="footer-links"><a href="tentang.html">Tentang kami</a><a href="produk.html">Produk</a><a href="pemesanan.html">Pemesanan</a><a href="kontak.html">Kontak</a></div></div><div class="container footer-bottom"><span>© <span data-year>2026</span> Rona Rasa. UMKM fiktif untuk tugas pembelajaran.</span><a href="#konten">Kembali ke atas ↑</a></div></footer>
+</body>
+</html>
